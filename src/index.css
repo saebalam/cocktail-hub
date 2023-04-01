@@ -500,6 +500,28 @@ Cocktail
   z-index: 1000;
 }
 
+@media screen and (max-width: 750px) {
+  .MyNavBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .MyNavBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 .about{
   margin-left: 2rem;
 }
