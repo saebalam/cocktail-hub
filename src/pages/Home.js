@@ -32,14 +32,17 @@ const Home = () => {
 
   //filter data on search
   useEffect(() => {
-    if (!searchvalue) return;
+    if (searchvalue==''){
+      setFilteredData(data)
+    }else{
+      setTimeout(() => {
+        const searchdata = data.filter((item) => {
+          return item.strDrink.toLowerCase().includes(searchvalue.toLowerCase());
+        });
+        setFilteredData(searchdata);
+      }, 400);
+    }
 
-    setTimeout(() => {
-      const searchdata = data.filter((item) => {
-        return item.strDrink.toLowerCase().includes(searchvalue.toLowerCase());
-      });
-      setFilteredData(searchdata);
-    }, 400);
   }, [searchvalue]);
 
   return (
